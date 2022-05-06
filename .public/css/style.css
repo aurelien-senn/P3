@@ -1,10 +1,20 @@
 body {
   font-family: roboto;
+  margin: 0;
+}
+
+input {
+  border: none;
 }
 
 header {
   width: 100%;
   box-shadow: 0em 0.5em 1em lightgrey;
+}
+@media only screen and (min-device-width: 1024px) {
+  header {
+    box-shadow: 0 0 0 0 white;
+  }
 }
 
 header img {
@@ -13,33 +23,105 @@ header img {
   width: 50%;
   padding: 1em;
 }
-
-body {
-  font-family: roboto;
+@media only screen and (min-device-width: 1024px) {
+  header img {
+    margin: 0 0 10vw 0;
+    width: 30%;
+    margin: 0;
+  }
 }
 
 .search {
   display: block;
   width: 100%;
   text-align: center;
+  background-color: rgb(250, 250, 250);
+  padding-bottom: 10%;
 }
-.search i {
-  position: absolute;
-  left: 0;
-  pointer-events: none;
-  font-size: 3em;
+@media only screen and (min-device-width: 1024px) {
+  .search {
+    background-color: rgb(240, 240, 240);
+    border-radius: 2vw;
+    padding-bottom: 0;
+  }
 }
-.search form input {
-  color: black;
-  width: 100%;
-  background-color: lightgrey;
+.search_town {
+  display: block;
+  background-color: rgb(240, 240, 240);
+  padding: 3vw;
+}
+@media only screen and (min-device-width: 1024px) {
+  .search_town {
+    padding: 0;
+    background: none;
+    background-color: rgb(235, 235, 235);
+    border-radius: 2vw 2vw 0 0;
+  }
+}
+.search_town i {
+  font-size: 4vw;
+  margin: 0;
+}
+.search_town input {
+  font-size: 4vw;
   text-align: center;
-  border: 0;
-  padding: 4%;
-  font-size: 3vw;
+  background-color: rgb(240, 240, 240);
+  color: black;
+  opacity: 1;
+  font-weight: 700;
+  position: relative;
+  background: none;
 }
-.search form input:active {
-  border: 0px;
+.search h1 {
+  font-size: 6vw;
+  padding: 3% 15% 0 15%;
+}
+@media only screen and (min-device-width: 1024px) {
+  .search h1 {
+    padding: 0;
+    font-size: 3vw;
+    margin: 0;
+  }
+}
+.search h2 {
+  color: grey;
+  font-size: 4vw;
+  font-weight: 300;
+  padding: 0 15% 5% 15%;
+}
+@media only screen and (min-device-width: 1024px) {
+  .search h2 {
+    padding: 0;
+    font-size: 2vw;
+    margin: 0;
+  }
+}
+.search form button {
+  color: white;
+  font-weight: 700;
+  display: inline-block;
+  width: 50%;
+  font-size: 3vw;
+  border: 0;
+  padding: 3% 0 3% 0;
+  border-radius: 10vw;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(180deg, #FF79DA, #9356DC);
+}
+@media only screen and (min-device-width: 1024px) {
+  .search form button {
+    padding: 1.5vw;
+    font-size: 1.7vw;
+    margin: 0;
+    width: 25%;
+  }
+}
+
+.working {
+  font-size: 6vw;
+}
+.working ol {
+  list-style: none;
 }
 
 /*# sourceMappingURL=style.css.map */

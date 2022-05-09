@@ -1,6 +1,50 @@
-.working{
-    font-size: 6vw;
-    & ol{
+.working {
+    padding: 5vw 0 5vw 0;
+        & h2 {
+        margin: 5vw;
+        font-size: 6vw;
+        padding-bottom: 4vw;
+       
+    }
+
+    &_numbericon {
+        color: white;
+        position: absolute;
+        transform: translateX(-8vw);
+        background-color: $colour-primary;
+        padding: 1vw 2vw 1vw 2vw;
+        border-radius: 5vw;
+
+    }
+
+    & ol {
+        font-size: 4vw;
         list-style: none;
-}
+        padding: 0;
+        width: 90%;
+        margin: 5vw;
+
+        & li {
+            cursor: pointer;
+            display: block;
+            background-color: rgb(241, 241, 241);
+            margin: 5vw;
+            padding: 6vw;
+            border-radius: 5vw;
+
+            &:hover {
+                background-color: #e9def7;
+
+                & i {
+                    color: $colour-primary;
+                }
+            }
+
+            & i {
+                font-size: 5vw;
+                padding: 0 5vw 0 5vw;
+                color: grey;
+            }
+        }
+    }
 }

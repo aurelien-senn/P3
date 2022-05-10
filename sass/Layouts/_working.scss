@@ -1,10 +1,21 @@
 .working {
     padding: 5vw 0 5vw 0;
-        & h2 {
+
+    @media screen and(min-width : 1024px) {
+        padding: 2vw;
+    }
+
+    & h2 {
         margin: 5vw;
         font-size: 6vw;
         padding-bottom: 4vw;
-       
+
+        @media screen and(min-width : 1024px) {
+            font-size: 3vw;
+            padding: 0 0 1.5vw 0.5vw;
+            margin: 0;
+
+        }
     }
 
     &_numbericon {
@@ -15,14 +26,28 @@
         padding: 1vw 2vw 1vw 2vw;
         border-radius: 5vw;
 
+        @media screen and(min-width : 1024px) {
+
+            font-size: 1vw;
+            padding: 1vw 1.2vw 1vw 1.2vw;
+            transform: translate(-1vw,1.2vw);
+        
+        }
+
     }
+
 
     & ol {
         font-size: 4vw;
         list-style: none;
         padding: 0;
-        width: 90%;
         margin: 5vw;
+
+        @media screen and(min-width : 1024px) {
+            display: flex;
+            margin: 0;
+
+        }
 
         & li {
             cursor: pointer;
@@ -30,7 +55,20 @@
             background-color: rgb(241, 241, 241);
             margin: 5vw;
             padding: 6vw;
+            
             border-radius: 5vw;
+
+            @media screen and(min-width : 1024px) {
+
+                flex-direction: row;
+                display: inline;
+                margin: 0 1.5vw 0 1.5vw;
+                padding:0.5vw 0 0.5vw 0;
+                font-size: 1.5vw;
+                border-radius: 2vw;
+                width: 30%;
+
+            }
 
             &:hover {
                 background-color: #e9def7;
@@ -44,6 +82,13 @@
                 font-size: 5vw;
                 padding: 0 5vw 0 5vw;
                 color: grey;
+
+                @media screen and(min-width : 1024px) {
+font-size: 1.5vw;
+                    padding: 2vw 2vw 2vw 3vw;
+
+                }
+
             }
         }
     }

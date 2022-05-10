@@ -5,3 +5,13 @@ body{
 input{
     border:none;
 }
+a{
+    text-decoration:none;
+    color:black;
+    &:hover{
+        color: black;
+    }
+}
+li{
+    list-style: none;
+}

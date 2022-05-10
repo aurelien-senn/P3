@@ -1,0 +1,35 @@
+// page menue
+.entete{
+    width: 100%;
+    display: block;
+    position: relative;
+   
+    
+    & img{
+       width: 100%;
+    }
+    &_title{
+        position: absolute;
+        width: 100%;
+        background-color: white;
+        border-radius: 5vw 5vw 0 0;
+        bottom: 0.2vw;
+        
+        
+    }
+    & h1{
+        
+        font-family:Shrikhand;
+        font-size: 8vw;
+        margin: 0;
+        padding: 4vw 0 0 2vw;
+        
+        
+    }
+    & i{
+        font-size: 7vw;
+        position: absolute;
+        bottom: 3vw;
+        right: 3vw;
+    }
+}

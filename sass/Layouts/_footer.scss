@@ -1,25 +1,56 @@
-footer{
+footer {
     font-size: 5vw;
     color: white;
-    
+
     background-color: rgb(52, 52, 52);
-    & img{
+
+    @media all and (min-width: 1024px) {
+        font-size: 2vw;
+    }
+
+    & img {
         width: 30%;
         height: 30%;
         margin: 8vw 0 0vw 7vw;
         filter: invert(100%);
-       
+
+        @media all and (min-width: 1024px) {
+            width: 10%;
+            height: 10%;
+            margin: 2vw 0 0vw 1vw;
+
+        }
+
     }
-    & ul{
-       padding-bottom: 7vw;
-        & li{
+
+    & ul {
+        padding-bottom: 7vw;
+        margin: 0;
+
+        @media all and (min-width: 1024px) {
+            display: flex;
+            padding:1vw 0 1vw 0;
+
+        }
+
+        & li {
             line-height: 150%;
             list-style: none;
-            & .fa-utensils{
+
+            @media all and (min-width: 1024px) {padding: 0 1vw 0 1vw; }
+
+            & .fa-utensils {
                 padding-right: 5vw;
+
+                @media all and (min-width: 1024px) {}
+           padding-right: 1vw;
             }
-            & .fa-handshake-angle{
+
+            & .fa-handshake-angle {
                 padding-right: 3vw;
+
+                @media all and (min-width: 1024px) {}
+                padding-right: 1vw;
 
             }
 

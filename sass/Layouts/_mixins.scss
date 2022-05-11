@@ -1,0 +1,21 @@
+@mixin buttom(){
+     
+        color: white;
+        font-weight: 700;
+        display: inline-block;
+        width: 50%;
+        font-size: 3vw;
+        border: 0;
+        padding: 3% 0 3% 0;
+        border-radius:10vw;
+        background: rgb(2,0,36);
+        background: linear-gradient(180deg, $colour-secondary, $colour-primary);
+        @media all and (min-width: 1024px)
+{
+            padding:1.5vw;  
+            font-size: 1.7vw;
+            margin: 0; 
+            width: 25%;   
+        }
+    
+}

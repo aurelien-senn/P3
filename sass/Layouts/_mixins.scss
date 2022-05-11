@@ -11,10 +11,9 @@
         background: rgb(2,0,36);
         background: linear-gradient(180deg, $colour-secondary, $colour-primary);
         @media all and (min-width: 1024px)
-{
+        {
             padding:1.5vw;  
             font-size: 1.7vw;
-            margin: 0; 
             width: 25%;   
         }
     

@@ -87,21 +87,48 @@
             }
         }
         & i{ 
-            
+            display: block;
             position: absolute;
             font-size: 6vw;
-            display: inline-block;
+            bottom: 5vw;
             width: 95%;
-            transform:translatey(-12vw);
+            
             text-align: right;
             @media screen and(min-width : 1024px) {
                 font-size: 2vw;
-                transform:translatey(-4vw);
+                bottom: 2vw;
             }
         }
        
     }
 }
+
+.heart-solid{
+    
+    background: linear-gradient(180deg, $colour-secondary,$colour-primary);
+background-clip: border-box;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+    position: absolute;
+    transform-origin: bottom;
+    opacity: 0;
+    
+    &:active{
+        animation: heart-color 1s linear paused; 
+    }
+    
+}
+  @keyframes heart-color{
+      0%{
+        opacity: 1;
+      }
+      100%{
+        opacity: 1;
+
+      }
+  }
+
+
 .container{
     @media screen and(min-width : 1024px) {
         display: flex;

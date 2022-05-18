@@ -21,7 +21,7 @@ li{
 #chargement {
     border: 12px solid $colour-primary;
     border-radius: 50%;
-    border-top: 12px solid #DDD;
+    border-top: 12px solid rgba(255,255,255,0.1);
     width: 40vw;
     height: 40vw;
     animation: spin 2s;
@@ -33,15 +33,17 @@ li{
     margin: auto;
     opacity: 0;
     z-index: 1;
-   
+ 
+    
   }
   
   @keyframes spin {
     
-        
+     
 
         0% { transform: rotate(0deg);
             opacity: 1;
+
             }
         100% { transform: rotate(360deg); 
         opacity: 1;
@@ -52,8 +54,9 @@ li{
       
     
     }
-    article{
-        &:hover{
-            box-shadow: 1vw 1vw 1vw lightgrey;
-        }
-    }
+   :root{
+       width: 100%;
+       height: 100%;
+       z-index: 10;
+       background-color: black;
+   }

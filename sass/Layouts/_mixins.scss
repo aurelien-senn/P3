@@ -10,6 +10,11 @@
         border-radius:10vw;
         background: rgb(2,0,36);
         background: linear-gradient(180deg, $colour-secondary, $colour-primary);
+        box-shadow: 1vw 1vw 1vw lightgrey;
+        &:hover{
+        box-shadow: 1vw 2vw 1vw lightgrey;
+        opacity: .9;
+    }
         @media all and (min-width: 1024px)
         {
             padding:1.5vw;  

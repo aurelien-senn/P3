@@ -10,12 +10,7 @@
         margin-top: 0;
         margin-bottom: 2vw;
     }
-&_article{
-    &:hover{
-        
-                box-shadow: 1vw 1vw 1vw lightgrey;
-            }
-        }
+
     
     &_new {
         position: absolute;
@@ -109,8 +104,6 @@
             bottom: 5vw;
             width: 95%;
             text-align: right;
-
-            // overflow: hidden;
             @media screen and(min-width : 1024px) {
                 font-size: 2vw;
                 bottom: 2vw;
@@ -125,7 +118,7 @@
 
     position: absolute;
     transition: all 0.3s linear 0s;
-    background: linear-gradient(180deg, $colour-secondary, $colour-primary);
+    background: linear-gradient(180deg,  $colour-primary,$colour-secondary);
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -133,17 +126,13 @@
 
 
 
-    //   &:active{
-    //       opacity: 1;
-
-    //   }
+   
 }
 
 .heart-regular {
 
     &:hover+.heart-solid1 {
-        // opacity: 1;
-        animation: heart-progress 1000ms ease-in-out forwards;
+                animation: heart-progress 1000ms ease-in-out forwards;
     }
 }
 
@@ -163,7 +152,7 @@
     }
 
     75% {
-        transform: scaley(1.1);
+        transform: scaley(1.2);
         opacity: 1;
     }
 

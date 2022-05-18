@@ -52,3 +52,8 @@ li{
       
     
     }
+    article{
+        &:hover{
+            box-shadow: 1vw 1vw 1vw lightgrey;
+        }
+    }

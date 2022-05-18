@@ -48,6 +48,10 @@ li {
     opacity: 1;
   }
 }
+article:hover {
+  box-shadow: 1vw 1vw 1vw lightgrey;
+}
+
 header {
   width: 100%;
   box-shadow: 0em 0.5em 1em lightgrey;
@@ -255,6 +259,9 @@ header img {
     margin-bottom: 2vw;
   }
 }
+.restaurant_article:hover {
+  box-shadow: 1vw 1vw 1vw lightgrey;
+}
 .restaurant_new {
   position: absolute;
   font-size: 6vw;
@@ -350,24 +357,41 @@ header img {
   }
 }
 
-.heart-solid {
+.heart-solid1 {
+  position: absolute;
+  transition: all 0.3s linear 0s;
   background: linear-gradient(180deg, #FF79DA, #9356DC);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  position: absolute;
-  transform-origin: bottom;
-  opacity: 0;
-}
-.heart-solid:active {
-  animation: heart-color 1s linear paused;
+  transform: scaleY(0);
 }
 
-@keyframes heart-color {
+.heart-regular:hover + .heart-solid1 {
+  animation: heart-progress 1000ms ease-in-out forwards;
+}
+
+@keyframes heart-progress {
   0% {
+    transform: scaley(1);
+    opacity: 0.6;
+  }
+  25% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  75% {
+    transform: scaley(1.1);
+    opacity: 1;
+  }
+  90% {
+    transform: scaley(1);
     opacity: 1;
   }
   100% {
+    transform: scaley(1);
     opacity: 1;
   }
 }
@@ -375,6 +399,79 @@ header img {
   .container {
     display: flex;
   }
+}
+
+.container-menue_plat {
+  overflow: hidden;
+}
+.container-menue_plat:hover .validation-plat {
+  animation: slide-plat 500ms ease-out forwards;
+}
+.container-menue_plat:hover .validation-plat i {
+  animation: validation-plat 500ms ease-in-out forwards;
+}
+.container-menue_plat:hover .prix {
+  animation: reduction-indegrient-prix 500ms ease-out forwards;
+}
+
+.validation-plat {
+  position: absolute;
+  bottom: 0;
+  right: 0vw;
+  background-color: #99E2D0;
+  width: 18vw;
+  height: 19vw;
+  transform: translate(20vw);
+}
+.validation-plat i {
+  position: absolute;
+  font-size: 6vw;
+  top: 30%;
+  right: 30%;
+  color: #99E2D0;
+  width: 6vw;
+  height: 6vw;
+  padding: 1vw;
+  background-color: white;
+  border-radius: 50%;
+}
+
+@keyframes slide-plat {
+  from {
+    transform: translate(10vw);
+  }
+  to {
+    transform: translate(0vw);
+  }
+}
+@keyframes validation-plat {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes reduction-indegrient-prix {
+  0% {
+    transform: translate(-2vw);
+  }
+  100% {
+    transform: translate(-18vw);
+  }
+}
+@keyframes apparition-plat {
+  0% {
+    opacity: 0%;
+    transform: translatey(3vw);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+.container-menue_plat {
+  animation: apparition-plat 2000ms ease-out forwards;
 }
 
 footer {
@@ -550,6 +647,10 @@ footer ul li .fa-handshake-angle {
   margin: auto;
   margin-bottom: 3vw;
   position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  padding-right: 20px;
 }
 @media screen and (min-width: 1024px) {
   .container-menue_plat {
@@ -557,12 +658,16 @@ footer ul li .fa-handshake-angle {
     padding: 1vw 7vw 1vw 0;
     border-radius: 1vw;
   }
-  .container-menue_plat h3, .container-menue_plat p, .container-menue_plat h2 {
+  .container-menue_plat h3,
+.container-menue_plat p,
+.container-menue_plat h2 {
     padding-left: 1vw;
   }
 }
 @media screen and (min-width: 1024px) and (min-width: 1024px) {
-  .container-menue_plat h3, .container-menue_plat p, .container-menue_plat h2 {
+  .container-menue_plat h3,
+.container-menue_plat p,
+.container-menue_plat h2 {
     font-size: 1.5vw;
     margin: 0;
   }

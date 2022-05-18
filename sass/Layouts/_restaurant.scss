@@ -1,18 +1,23 @@
-
-
-
-.restaurant{
+.restaurant {
     background-color: rgb(241, 240, 240);
     padding-bottom: 15vw;
+
     @media screen and(min-width : 1024px) {
-        width:94%;
+        width: 94%;
         padding: 0vw 0vw 2vw 2vw;
         margin-left: 1vw;
         border-radius: 3vw;
         margin-top: 0;
         margin-bottom: 2vw;
     }
-    &_new{
+&_article{
+    &:hover{
+        
+                box-shadow: 1vw 1vw 1vw lightgrey;
+            }
+        }
+    
+    &_new {
         position: absolute;
         font-size: 6vw;
         background-color: $colour-tertiary;
@@ -21,26 +26,30 @@
         top: 7%;
         padding: 4.5vw;
         font-weight: 700;
+
         @media screen and(min-width : 1024px) {
-        left: 57%;
-        top: 5%;
-        padding: 1vw 2vw 1vw 2vw;
-        font-size: 1vw;
+            left: 57%;
+            top: 5%;
+            padding: 1vw 2vw 1vw 2vw;
+            font-size: 1vw;
         }
     }
-    & h2{
+
+    & h2 {
         font-size: 6vw;
         padding: 10vw 0 0 5vw;
+
         @media screen and(min-width : 1024px) {
             font-size: 3vw;
             padding: 1vw 0 0 2vw;
-            margin-top:0 ;
+            margin-top: 0;
         }
-        
-    }
-    & article{
 
-        
+    }
+
+    & article {
+
+
         cursor: pointer;
         position: relative;
         overflow: hidden;
@@ -50,88 +59,216 @@
         line-height: 1.2vw;
         font-size: 4vw;
         margin: 5vw 0vw 0vw 5vw;
+
         @media screen and(min-width : 1024px) {
             margin: 0 0 0 0;
             font-size: 3vw;
             display: block;
             width: 80%;
         }
-        
-        & h3{
+
+        & h3 {
             margin-left: 2vw;
+
             @media screen and(min-width : 1024px) {
                 font-size: 1.5vw;
                 padding: 1vw 0 1vw 0;
                 margin: 0 0 0 1vw;
             }
-            
+
         }
-        & p{
-            margin-left: 2vw; 
+
+        & p {
+            margin-left: 2vw;
             padding-bottom: 1vw;
+
             @media screen and(min-width : 1024px) {
                 font-size: 1.5vw;
                 padding: 0 0 1vw 0;
                 margin: 0 0 0 1vw;
             }
         }
-        & img{
-            
+
+        & img {
+
             width: 90vw;
             height: 45vw;
-            object-fit:cover;
+            object-fit: cover;
+
             @media screen and(min-width : 1024px) {
                 width: 24vw;
                 height: 12vw;
-                
+
             }
         }
-        & i{ 
+
+        & i {
             display: block;
             position: absolute;
             font-size: 6vw;
             bottom: 5vw;
             width: 95%;
-            
             text-align: right;
+
+            // overflow: hidden;
             @media screen and(min-width : 1024px) {
                 font-size: 2vw;
                 bottom: 2vw;
             }
         }
-       
+
     }
 }
 
-.heart-solid{
-    
-    background: linear-gradient(180deg, $colour-secondary,$colour-primary);
-background-clip: border-box;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+.heart-solid1 {
+
+
     position: absolute;
-    transform-origin: bottom;
-    opacity: 0;
-    
-    &:active{
-        animation: heart-color 1s linear paused; 
-    }
-    
+    transition: all 0.3s linear 0s;
+    background: linear-gradient(180deg, $colour-secondary, $colour-primary);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scaleY(0);
+
+
+
+    //   &:active{
+    //       opacity: 1;
+
+    //   }
 }
-  @keyframes heart-color{
-      0%{
+
+.heart-regular {
+
+    &:hover+.heart-solid1 {
+        // opacity: 1;
+        animation: heart-progress 1000ms ease-in-out forwards;
+    }
+}
+
+@keyframes heart-progress {
+    0% {
+        transform: scaley(1);
+        opacity: .6;
+    }
+
+    25% {
+        
+        opacity: .8;
+    }
+
+    50% {
+        opacity: .9;
+    }
+
+    75% {
+        transform: scaley(1.1);
         opacity: 1;
-      }
-      100%{
+    }
+
+    90% {
+        transform: scaley(1);
         opacity: 1;
+    }
 
-      }
-  }
+    100% {
+        transform: scaley(1);
+        opacity: 1;
+    }
+}
 
 
-.container{
+
+.container {
     @media screen and(min-width : 1024px) {
         display: flex;
     }
+
+}
+.container-menue_plat{
+    overflow: hidden;
+
+    &:hover .validation-plat{
+        animation: slide-plat 500ms ease-out forwards;
+    }
+    &:hover .validation-plat i{
+        animation:validation-plat  500ms ease-in-out forwards;
+
+    }
+    &:hover .prix{
+
+    animation:reduction-indegrient-prix 500ms ease-out forwards;
+    }
+}
+
     
+   
+
+.validation-plat{
+    position: absolute;
+    bottom: 0;
+    right: 0vw;
+    background-color: $colour-tertiary;
+    
+    width: 18vw;
+    height: 19vw;
+    transform: translate(20vw);
+    & i{
+        position: absolute;
+        font-size: 6vw;
+        top: 30%;
+        right: 30%;
+        color: $colour-tertiary;
+        width: 6vw;
+        height: 6vw;
+        padding: 1vw;
+        background-color: white;
+        border-radius: 50%;
+        }
+}
+
+@keyframes slide-plat {
+    from{
+        
+        transform:translate(10vw);
+
+    }
+    to{
+        
+        transform:translate(0vw);
+     }
+    
+}
+@keyframes validation-plat {
+    from{
+transform: rotate(0deg);
+
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes reduction-indegrient-prix {
+    0%{transform:translate(-2vw);
+    
+    }100%{
+        transform:translate(-18vw);
+    }
+}
+@keyframes apparition-plat {
+    0%{
+        opacity: 0%;
+        transform: translatey(3vw);
+
+    }
+    100%{
+        opacity: 100%;
+        transform: translateY(0);
+    }
+    
+}
+.container-menue_plat{
+    animation:apparition-plat 2000ms ease-out forwards;
+
 }

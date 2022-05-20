@@ -293,16 +293,15 @@ header img {
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  width: 90%;
   border-radius: 7%;
   background-color: white;
   line-height: 1.2vw;
   font-size: 4vw;
-  margin: 5vw 0vw 0vw 5vw;
+  margin: 5vw 5vw 0vw 5vw;
 }
 @media screen and (min-width: 1024px) {
   .restaurant article {
-    margin: 0 0 0 0;
+    margin: 0 2vw 0 0;
     font-size: 3vw;
     display: block;
     width: 80%;
@@ -366,26 +365,27 @@ header img {
 }
 
 .heart-regular:hover + .heart-solid1 {
-  animation: heart-progress 1000ms ease-in-out forwards;
+  animation: heart-progress 500ms ease-in-out forwards;
 }
 
 @keyframes heart-progress {
   0% {
     transform: scaley(1);
-    opacity: 0.6;
+    opacity: 0.2;
   }
   25% {
-    opacity: 0.8;
+    opacity: 0.3;
   }
   50% {
-    opacity: 0.9;
+    opacity: 0.5;
+    transform: scaley(1.1);
   }
   75% {
     transform: scaley(1.2);
     opacity: 1;
   }
   90% {
-    transform: scaley(1);
+    transform: scaley(1.1);
     opacity: 1;
   }
   100% {
@@ -411,14 +411,33 @@ header img {
 .container-menue_plat:hover .prix {
   animation: reduction-indegrient-prix 500ms ease-out forwards;
 }
+.container-menue_plat:hover .reduction-plat {
+  animation: reduction 500ms ease-out forwards;
+}
+
+@keyframes reduction {
+  from {
+    padding-right: 0;
+  }
+  to {
+    padding-right: 25vw;
+  }
+}
+.reduction-plat {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-top: 1.5vw;
+  padding-bottom: 1.5vw;
+}
 
 .validation-plat {
   position: absolute;
-  bottom: 0;
+  bottom: 0vw;
   right: 0vw;
   background-color: #99E2D0;
   width: 18vw;
-  height: 19vw;
+  height: 21.5vw;
   transform: translate(20vw);
 }
 .validation-plat i {
@@ -485,7 +504,7 @@ footer {
 footer img {
   width: 30%;
   height: 30%;
-  margin: 8vw 0 0vw 7vw;
+  margin: 8vw 0 4vw 4vw;
   filter: invert(100%);
 }
 @media all and (min-width: 1024px) {
@@ -519,9 +538,13 @@ footer ul li .fa-utensils {
   padding-right: 1vw;
 }
 footer ul li .fa-handshake-angle {
-  padding-right: 3vw;
+  margin-right: 3vw;
   padding-right: 1vw;
 }
+footer ul li .fa-utensils {
+  margin-right: 4.7vw;
+}
+
 .lightgrey-background {
   background-color: rgb(240, 240, 240);
 }
@@ -670,6 +693,11 @@ footer ul li .fa-handshake-angle {
     margin: 0;
   }
 }
+@media screen and (min-width: 1024px) {
+  .container-menue_plat p {
+    display: block;
+  }
+}
 .container-menue_plat .prix {
   font-weight: 700;
   position: absolute;
@@ -708,28 +736,6 @@ footer ul li .fa-handshake-angle {
   .buttom-command {
     margin-top: 5vw;
     margin-bottom: 5vw;
-  }
-}
-
-:root :after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  box-sizing: border-box;
-  width: 100%;
-  height: 200%;
-  z-index: 10;
-  opacity: 0;
-  animation: background-opacity 2s linear forwards;
-}
-
-@keyframes background-opacity {
-  from {
-    opacity: 0.1;
-  }
-  to {
-    opacity: 0.2;
   }
 }
 

@@ -11,7 +11,7 @@ footer {
     & img {
         width: 30%;
         height: 30%;
-        margin: 8vw 0 0vw 7vw;
+        margin: 8vw 0 4vw 4vw;
         filter: invert(100%);
 
         @media all and (min-width: 1024px) {
@@ -45,14 +45,19 @@ footer {
                 @media all and (min-width: 1024px) {}
            padding-right: 1vw;
             }
+            
 
-            & .fa-handshake-angle {
-                padding-right: 3vw;
+            & .fa-handshake-angle, {
+                margin-right: 3vw;
 
                 @media all and (min-width: 1024px) {}
                 padding-right: 1vw;
 
             }
+            & .fa-utensils{
+                margin-right:4.7vw ;
+            }
+            
 
         }
     }

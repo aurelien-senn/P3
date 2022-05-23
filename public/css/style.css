@@ -324,8 +324,6 @@ header img {
 @media screen and (min-width: 1024px) {
   .restaurant article p {
     font-size: 1.5vw;
-    padding: 0 0 1vw 0;
-    margin: 0 0 0 1vw;
   }
 }
 .restaurant article img {
@@ -408,19 +406,41 @@ header img {
 .container-menue_plat:hover .validation-plat i {
   animation: validation-plat 500ms ease-in-out forwards;
 }
-.container-menue_plat:hover .prix {
-  animation: reduction-indegrient-prix 500ms ease-out forwards;
+@media screen and (max-width: 1023px) {
+  .container-menue_plat:hover .prix {
+    animation: reduction-indegrient-prix-mobile 500ms ease-out forwards;
+  }
 }
-.container-menue_plat:hover .reduction-plat {
-  animation: reduction 500ms ease-out forwards;
+@media screen and (min-width: 1024px) {
+  .container-menue_plat:hover .prix {
+    animation: reduction-indegrient-prix-desktop 500ms ease-out forwards;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .container-menue_plat:hover .reduction-plat {
+    animation: reduction-mobile 500ms ease-out forwards;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container-menue_plat:hover .reduction-plat {
+    animation: reduction-desktop 500ms ease-out forwards;
+  }
 }
 
-@keyframes reduction {
+@keyframes reduction-mobile {
   from {
     padding-right: 0;
   }
   to {
     padding-right: 25vw;
+  }
+}
+@keyframes reduction-desktop {
+  from {
+    padding-right: 0;
+  }
+  to {
+    padding-right: 40%;
   }
 }
 .reduction-plat {
@@ -440,6 +460,13 @@ header img {
   height: 21.5vw;
   transform: translate(20vw);
 }
+@media all and (min-width: 1024px) {
+  .validation-plat {
+    width: 7vw;
+    height: 6.5vw;
+    transform: translate(7vw);
+  }
+}
 .validation-plat i {
   position: absolute;
   font-size: 6vw;
@@ -451,6 +478,14 @@ header img {
   padding: 1vw;
   background-color: white;
   border-radius: 50%;
+}
+@media all and (min-width: 1024px) {
+  .validation-plat i {
+    width: 1vw;
+    height: 1vw;
+    font-size: 1.5vw;
+    padding-top: 0.5vw;
+  }
 }
 
 @keyframes slide-plat {
@@ -469,12 +504,20 @@ header img {
     transform: rotate(360deg);
   }
 }
-@keyframes reduction-indegrient-prix {
+@keyframes reduction-indegrient-prix-mobile {
   0% {
     transform: translate(-2vw);
   }
   100% {
     transform: translate(-18vw);
+  }
+}
+@keyframes reduction-indegrient-prix-desktop {
+  0% {
+    transform: translate(-2vw);
+  }
+  100% {
+    transform: translate(-6vw);
   }
 }
 @keyframes apparition-plat {
@@ -539,10 +582,19 @@ footer ul li .fa-utensils {
 }
 footer ul li .fa-handshake-angle {
   margin-right: 3vw;
-  padding-right: 1vw;
+}
+@media all and (min-width: 1024px) {
+  footer ul li .fa-handshake-angle {
+    margin-right: 1vw;
+  }
 }
 footer ul li .fa-utensils {
   margin-right: 4.7vw;
+}
+@media all and (min-width: 1024px) {
+  footer ul li .fa-utensils {
+    margin-right: 0.4vw;
+  }
 }
 
 .lightgrey-background {
@@ -630,7 +682,6 @@ footer ul li .fa-utensils {
   .title-menue::before {
     width: 4vw;
     height: 0.3vw;
-    display: block;
     transform: translateY(2vw);
   }
 }
@@ -643,18 +694,18 @@ footer ul li .fa-utensils {
 @media screen and (min-width: 1024px) and (min-width: 1024px) {
   .super-container article {
     display: block;
-    width: 25%;
-    margin: 3vw;
+    margin-left: 4vw;
   }
 }
 
 .container-menue {
   padding: 0;
   margin: auto;
+  width: 100%;
 }
 @media screen and (min-width: 1024px) {
   .container-menue {
-    width: 90%;
+    width: 120%;
   }
 }
 .container-menue_plat {
@@ -664,20 +715,19 @@ footer ul li .fa-utensils {
   border-radius: 3vw;
   box-shadow: 1vw 1vw 1vw lightgrey;
   line-height: 50%;
-  padding: 0.5vw 0 0.5vw 1vw;
+  padding: 0 0 0 2vw;
   margin: auto;
   margin-bottom: 3vw;
   position: relative;
-  overflow: hidden;
-  text-overflow: ellipsis;
   display: block;
   padding-right: 20px;
 }
 @media screen and (min-width: 1024px) {
   .container-menue_plat {
-    margin: 1vw 1vw 0 0;
-    padding: 1vw 7vw 1vw 0;
+    margin: 1vw 0 0 0;
+    padding: 1.5vw 0vw 1.5vw 0;
     border-radius: 1vw;
+    line-height: 30%;
   }
   .container-menue_plat h3,
 .container-menue_plat p,
@@ -696,6 +746,13 @@ footer ul li .fa-utensils {
 @media screen and (min-width: 1024px) {
   .container-menue_plat p {
     display: block;
+    font-size: 1vw;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
+  .container-menue_plat p {
+    font-size: 1.2vw;
+    padding: 1vw 4vw 0 1vw;
   }
 }
 .container-menue_plat .prix {

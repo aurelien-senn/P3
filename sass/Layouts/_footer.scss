@@ -50,12 +50,18 @@ footer {
             & .fa-handshake-angle, {
                 margin-right: 3vw;
 
-                @media all and (min-width: 1024px) {}
-                padding-right: 1vw;
+                @media all and (min-width: 1024px) {
+                    margin-right: 1vw;
 
+                }
+                
             }
             & .fa-utensils{
                 margin-right:4.7vw ;
+                @media all and (min-width: 1024px) {
+                    margin-right: .4vw;
+
+                }
             }
             
 

@@ -17,11 +17,9 @@
         height: 0.6vw;
         display: block;
         transform: translateY(6vw);
-
         @media screen and(min-width : 1024px) {
             width: 4vw;
             height: 0.3vw;
-            display: block;
             transform: translateY(2vw)
         }
 
@@ -36,8 +34,7 @@
 
             @media screen and(min-width : 1024px) {
                 display: block;
-                width: 25%;
-                margin: 3vw;
+                margin-left: 4vw;
 
 
             }
@@ -50,12 +47,13 @@
 .container-menue {
     padding: 0;
     margin: auto;
-
+    width: 100%;
     @media screen and(min-width : 1024px) {
-        width: 90%;
-
-
+        width: 120%;  
     }
+
+
+   
 
 
 
@@ -66,20 +64,20 @@
         border-radius: 3vw;
         box-shadow: 1vw 1vw 1vw lightgrey;
         line-height: 50%;
-        padding: 0.5vw 0 0.5vw 1vw;
+        padding: 0 0 0 2vw;
         margin: auto;
         margin-bottom: 3vw;
         position: relative;
-        overflow: hidden;
-        text-overflow: ellipsis;
         display: block;
         padding-right: 20px;
     
 
         @media screen and(min-width : 1024px) {
-            margin: 1vw 1vw 0 0;
-            padding: 1vw 7vw 1vw 0;
+           
+            margin: 1vw 0 0 0;
+            padding: 1.5vw 0vw 1.5vw 0;
             border-radius: 1vw;
+            line-height: 30%;
 
             & h3,
             p,
@@ -94,6 +92,13 @@
             }
             & p{
                 display: block;
+                font-size: 1vw;
+                @media screen and(min-width : 1024px) {
+                    font-size: 1.2vw;
+                    padding: 1vw 4vw 0 1vw ;
+                    
+                   
+                }
                 
               }
 
@@ -124,22 +129,3 @@
 }
 
 
-// :root{
-//     :after{
-//         content: "";
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         box-sizing:border-box;
-//     width: 100%;
-//     height: 200%;
-//     z-index: 10;
-//     // background-color: rgba(255,255,255,0);
-//     opacity:0 ;
-//     animation: background-opacity 2s linear forwards
-// }
-// }
-// @keyframes background-opacity {
-//    from{ opacity:(0.1)};
-// to{opacity: (0.2)};    
-// } 

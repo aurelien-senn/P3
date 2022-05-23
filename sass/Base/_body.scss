@@ -17,11 +17,17 @@ a{
 li{
     list-style: none;
 }
-
-#chargement {
+#chargement{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: progress;
+}
+#chargement::before {
+    content: "";
     border: 12px solid $colour-primary;
     border-radius: 50%;
-    border-top: 12px solid rgba(255,255,255,0.1);
+    border-top: 12px solid rgb(255,255,255);
     width: 40vw;
     height: 40vw;
     animation: spin 2s;
@@ -32,11 +38,42 @@ li{
     right: 0;
     margin: auto;
     opacity: 0;
-    z-index: 1;
- 
+    z-index: 2;
+    position: absolute;
+}
+#chargement::after{
+       content: "";
+       background: rgb(255,255,255);
+       opacity: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: absolute;
+        transform-origin: auto;
+        animation: spin-background 2s;
+        z-index: 1;
+            
+    }
+   
     
-  }
+   @keyframes spin-background {
+    
+     
+
+    0% { opacity: 0.6;
+       
+
+        }
+        99%{
+            opacity: 0.6;
+        }
+    100% { opacity: 0; 
+    
+    
+        
+    }
   
+}
   @keyframes spin {
     
      

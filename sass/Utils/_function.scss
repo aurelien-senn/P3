@@ -1,0 +1,26 @@
+@for $order-apparition-plat from 1 through 3 {
+    .order-appariton-plat#{$order-apparition-plat} {
+        
+        animation:  1000ms ease-out 100ms*$order-apparition-plat forwards apparition-plat;
+    }
+}
+
+
+@keyframes apparition-plat {
+    0% {
+        opacity: 0%;
+        transform: translatey(3vw);
+
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+
+}
+
+// .container-menue_plat {
+//     animation: apparition-plat 2000ms ease-out forwards;
+
+// }

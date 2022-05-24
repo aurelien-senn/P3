@@ -336,21 +336,3 @@
     }
 }
 
-@keyframes apparition-plat {
-    0% {
-        opacity: 0%;
-        transform: translatey(3vw);
-
-    }
-
-    100% {
-        opacity: 100%;
-        transform: translateY(0);
-    }
-
-}
-
-.container-menue_plat {
-    animation: apparition-plat 2000ms ease-out forwards;
-
-}

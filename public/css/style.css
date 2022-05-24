@@ -1,3 +1,25 @@
+.order-appariton-plat1 {
+  animation: 1000ms ease-out 100ms forwards apparition-plat;
+}
+
+.order-appariton-plat2 {
+  animation: 1000ms ease-out 200ms forwards apparition-plat;
+}
+
+.order-appariton-plat3 {
+  animation: 1000ms ease-out 300ms forwards apparition-plat;
+}
+
+@keyframes apparition-plat {
+  0% {
+    opacity: 0%;
+    transform: translatey(3vw);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
 body {
   font-family: roboto;
   margin: 0;
@@ -25,7 +47,6 @@ li {
   position: absolute;
   width: 100%;
   height: 100%;
-  cursor: progress;
 }
 
 #chargement::before {
@@ -44,17 +65,17 @@ li {
   margin: auto;
   opacity: 0;
   z-index: 2;
-  position: absolute;
+  position: fixed;
 }
 
 #chargement::after {
   content: "";
   background: rgb(255, 255, 255);
   opacity: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 0;
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   transform-origin: auto;
   animation: spin-background 2s;
   z-index: 1;
@@ -62,13 +83,18 @@ li {
 
 @keyframes spin-background {
   0% {
+    height: 100%;
+    opacity: 0.6;
+  }
+  98% {
     opacity: 0.6;
   }
   99% {
-    opacity: 0.6;
+    height: 100%;
+    opacity: 0;
   }
   100% {
-    opacity: 0;
+    height: 0%;
   }
 }
 @keyframes spin {
@@ -553,20 +579,6 @@ header img {
     transform: translate(-6vw);
   }
 }
-@keyframes apparition-plat {
-  0% {
-    opacity: 0%;
-    transform: translatey(3vw);
-  }
-  100% {
-    opacity: 100%;
-    transform: translateY(0);
-  }
-}
-.container-menue_plat {
-  animation: apparition-plat 2000ms ease-out forwards;
-}
-
 footer {
   font-size: 5vw;
   color: white;

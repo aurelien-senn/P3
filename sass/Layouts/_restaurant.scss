@@ -78,6 +78,7 @@
 
             @media screen and(min-width : 1024px) {
                 font-size: 1.5vw;
+                margin: 0 0 0 1vw;
                }
         }
 
@@ -228,7 +229,7 @@
     }
 
     to {
-        padding-right: 40%;
+        padding-right: 40vw;
     }
 }
 
@@ -240,6 +241,12 @@
     white-space: nowrap;
     padding-top: 1.5vw;
     padding-bottom: 1.5vw;
+    @media all and (min-width: 1024px) {
+        display: block;
+        width: 100%;
+       
+     }
+   
   
 }
 

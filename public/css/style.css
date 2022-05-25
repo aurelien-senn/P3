@@ -64,7 +64,7 @@ li {
   right: 0;
   margin: auto;
   opacity: 0;
-  z-index: 2;
+  z-index: -2;
   position: fixed;
 }
 
@@ -101,10 +101,15 @@ li {
   0% {
     transform: rotate(0deg);
     opacity: 1;
+    z-index: 2;
+  }
+  99% {
+    z-index: 2;
   }
   100% {
     transform: rotate(360deg);
     opacity: 1;
+    z-index: -2;
   }
 }
 header {
@@ -287,10 +292,7 @@ header img {
     width: 30%;
   }
 }
-.working ol li:hover {
-  background-color: #e9def7;
-}
-.working ol li:hover i {
+.working ol li i {
   color: #9356DC;
 }
 .working ol li i {
@@ -303,6 +305,14 @@ header img {
     font-size: 1.5vw;
     padding: 2vw 2vw 2vw 3vw;
   }
+}
+
+.lioi:hover {
+  background-color: #e9def7;
+}
+
+.lioi-text:hover {
+  background-color: #e9def7;
 }
 
 .restaurant {
@@ -383,6 +393,7 @@ header img {
 @media screen and (min-width: 1024px) {
   .restaurant article p {
     font-size: 1.5vw;
+    margin: 0 0 0 1vw;
   }
 }
 .restaurant article img {
@@ -499,7 +510,7 @@ header img {
     padding-right: 0;
   }
   to {
-    padding-right: 40%;
+    padding-right: 40vw;
   }
 }
 .reduction-plat {
@@ -508,6 +519,12 @@ header img {
   white-space: nowrap;
   padding-top: 1.5vw;
   padding-bottom: 1.5vw;
+}
+@media all and (min-width: 1024px) {
+  .reduction-plat {
+    display: block;
+    width: 100%;
+  }
 }
 
 .validation-plat {

@@ -55,11 +55,8 @@
             background-color: rgb(241, 241, 241);
             margin: 5vw;
             padding: 6vw;
-            
             border-radius: 5vw;
-
             @media screen and(min-width : 1024px) {
-
                 flex-direction: row;
                 display: inline;
                 margin: 0 1.5vw 0 1.5vw;
@@ -67,15 +64,13 @@
                 font-size: 1.5vw;
                 border-radius: 2vw;
                 width: 30%;
-
             }
-
-            &:hover {
-                background-color: #e9def7;
-
+            // &:hover {
+            //     background-color: #e9def7;
+                
+                // }
                 & i {
                     color: $colour-primary;
-                }
             }
 
             & i {
@@ -93,3 +88,13 @@ font-size: 1.5vw;
         }
     }
 }
+.lioi:hover{
+
+    background-color: #e9def7;
+}
+.lioi-text:hover{
+
+    background-color: #e9def7;
+}
+
+

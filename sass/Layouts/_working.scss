@@ -49,8 +49,7 @@
 
         }
 
-        & li {
-            cursor: pointer;
+        & li{
             display: block;
             background-color: rgb(241, 241, 241);
             margin: 5vw;
@@ -64,11 +63,12 @@
                 font-size: 1.5vw;
                 border-radius: 2vw;
                 width: 30%;
+               
             }
-            // &:hover {
-            //     background-color: #e9def7;
+            &:hover {
+                background-color: #e9def7;
                 
-                // }
+                }
                 & i {
                     color: $colour-primary;
             }
@@ -88,13 +88,6 @@ font-size: 1.5vw;
         }
     }
 }
-.lioi:hover{
 
-    background-color: #e9def7;
-}
-.lioi-text:hover{
-
-    background-color: #e9def7;
-}
 
 

@@ -23,10 +23,16 @@ li {
 }
 
 #chargement {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    // cursor: progress;
+    background: rgb(255, 255, 255);
+    opacity: 0;
+    width: 100vw;
+    height:100vh;
+    overflow: hidden;
+    position: fixed;
+    transform-origin: auto;
+    animation: spin-background 2s;
+    z-index: -10;
+    
 }
 
 #chargement::before {
@@ -50,15 +56,7 @@ li {
 
 #chargement::after {
     content: "";
-    background: rgb(255, 255, 255);
-    opacity: 0;
-    width: 100vw;
-    height:0 ;
-    overflow: hidden;
-    position: fixed;
-    transform-origin: auto;
-    animation: spin-background 2s;
-    z-index: 1;
+    
 
 }
 
@@ -68,21 +66,22 @@ li {
 
 
     0% {
-        height: 100%;
+        
         opacity: 0.6;
+        z-index: 1;
     }
 98%{
     opacity: 0.6;
 }
     99% {
-        height: 100%;
+        z-index: 1;
+        
         opacity: 0;
     }
 
     100% {
-        
-        height: 0%;
-    }
+        z-index: -10;
+        }
 
 }
 

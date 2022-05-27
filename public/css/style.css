@@ -44,9 +44,15 @@ li {
 }
 
 #chargement {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  background: rgb(255, 255, 255);
+  opacity: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  transform-origin: auto;
+  animation: spin-background 2s;
+  z-index: -10;
 }
 
 #chargement::before {
@@ -70,31 +76,22 @@ li {
 
 #chargement::after {
   content: "";
-  background: rgb(255, 255, 255);
-  opacity: 0;
-  width: 100vw;
-  height: 0;
-  overflow: hidden;
-  position: fixed;
-  transform-origin: auto;
-  animation: spin-background 2s;
-  z-index: 1;
 }
 
 @keyframes spin-background {
   0% {
-    height: 100%;
     opacity: 0.6;
+    z-index: 1;
   }
   98% {
     opacity: 0.6;
   }
   99% {
-    height: 100%;
+    z-index: 1;
     opacity: 0;
   }
   100% {
-    height: 0%;
+    z-index: -10;
   }
 }
 @keyframes spin {
@@ -274,7 +271,6 @@ header img {
   }
 }
 .working ol li {
-  cursor: pointer;
   display: block;
   background-color: rgb(241, 241, 241);
   margin: 5vw;
@@ -292,6 +288,9 @@ header img {
     width: 30%;
   }
 }
+.working ol li:hover {
+  background-color: #e9def7;
+}
 .working ol li i {
   color: #9356DC;
 }
@@ -305,14 +304,6 @@ header img {
     font-size: 1.5vw;
     padding: 2vw 2vw 2vw 3vw;
   }
-}
-
-.lioi:hover {
-  background-color: #e9def7;
-}
-
-.lioi-text:hover {
-  background-color: #e9def7;
 }
 
 .restaurant {
@@ -520,13 +511,6 @@ header img {
   padding-top: 1.5vw;
   padding-bottom: 1.5vw;
 }
-@media all and (min-width: 1024px) {
-  .reduction-plat {
-    display: block;
-    width: 100%;
-  }
-}
-
 .validation-plat {
   position: absolute;
   bottom: 0vw;
@@ -657,6 +641,14 @@ footer ul li .fa-utensils {
   footer ul li .fa-utensils {
     margin-right: 0.4vw;
   }
+}
+
+footer li a {
+  color: white;
+  text-decoration: none;
+}
+footer li a:hover {
+  color: white;
 }
 
 .lightgrey-background {

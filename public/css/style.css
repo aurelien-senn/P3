@@ -291,7 +291,7 @@ header img {
 .working ol li:hover {
   background-color: #e9def7;
 }
-.working ol li i {
+.working ol li:hover i {
   color: #9356DC;
 }
 .working ol li i {
@@ -659,7 +659,7 @@ footer li a:hover {
 .fa-arrow-left {
   position: absolute;
   font-size: 5vw;
-  padding: 4vw 0 0 3vw;
+  padding: 5vw 0 0 4vw;
 }
 @media screen and (min-width: 1024px) {
   .fa-arrow-left {
@@ -686,14 +686,15 @@ footer li a:hover {
   position: absolute;
   width: 100%;
   background-color: rgb(240, 240, 240);
-  border-radius: 5vw 5vw 0 0;
+  border-radius: 8vw 8vw 0 0;
   bottom: 0.2vw;
 }
 .entete h1 {
   font-family: Shrikhand;
   font-size: 8vw;
+  font-weight: 400;
   margin: 0;
-  padding: 4vw 0 0 2vw;
+  padding: 6vw 0 0 4vw;
 }
 @media screen and (min-width: 1024px) {
   .entete h1 {
@@ -716,7 +717,9 @@ footer li a:hover {
 .title-menue {
   padding-left: 4vw;
   padding-bottom: 2vw;
+  padding: 7vw 0 2vw 4vw;
   font-size: 4vw;
+  font-weight: 400;
 }
 @media screen and (min-width: 1024px) {
   .title-menue {

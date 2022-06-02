@@ -6,7 +6,7 @@
 .fa-arrow-left{
     position: absolute;
     font-size: 5vw;
-padding: 4vw 0 0 3vw;
+padding: 5vw 0 0 4vw;
 @media screen and(min-width : 1024px) {
     padding: 1vw 0vw 0 93vw;
   }
@@ -29,7 +29,7 @@ padding: 4vw 0 0 3vw;
         position: absolute;
         width: 100%;
         background-color: rgb(240, 240, 240);
-        border-radius: 5vw 5vw 0 0;
+        border-radius: 8vw 8vw 0 0;
         bottom: 0.2vw;
         
         
@@ -39,8 +39,9 @@ padding: 4vw 0 0 3vw;
         
         font-family:Shrikhand;
         font-size: 8vw;
+        font-weight: 400;
         margin: 0;
-        padding: 4vw 0 0 2vw;
+        padding: 6vw 0 0 4vw;
         @media screen and(min-width : 1024px) {
             font-size: 3vw;
             padding-top:2vw ;

@@ -173,6 +173,7 @@ header img {
   font-weight: 700;
   position: relative;
   background: none;
+  cursor: pointer;
 }
 .search h1 {
   font-size: 6vw;
@@ -210,6 +211,7 @@ header img {
   background: rgb(2, 0, 36);
   background: linear-gradient(180deg, #FF79DA, #9356DC);
   box-shadow: 1vw 1vw 1vw lightgrey;
+  cursor: pointer;
 }
 .search form button:hover {
   box-shadow: 1vw 2vw 1vw lightgrey;
@@ -594,7 +596,7 @@ footer {
 footer img {
   width: 30%;
   height: 30%;
-  margin: 8vw 0 4vw 4vw;
+  margin: 8vw 0 4vw 5vw;
   filter: invert(100%);
 }
 @media all and (min-width: 1024px) {
@@ -837,6 +839,7 @@ footer li a:hover {
   margin: auto;
   margin-top: 10vw;
   margin-bottom: 10vw;
+  cursor: pointer;
 }
 .buttom-command:hover {
   box-shadow: 1vw 2vw 1vw lightgrey;

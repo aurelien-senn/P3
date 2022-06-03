@@ -38,7 +38,8 @@
             opacity: 1;
             font-weight: 700; 
             position: relative;
-            background:none
+            background:none;
+            cursor:pointer;
            
            
         }
@@ -67,6 +68,7 @@
     }
     & form button{
        @include buttom;
+       cursor:pointer;
     }
 
 }
